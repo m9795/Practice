@@ -210,17 +210,92 @@
 // }
 
 // 練習19
+// #include <stdio.h>
+
+// void main(){
+//     printf("西暦を入力してください。\n");
+//     int year;
+//     scanf("%d", &year);
+//     if(year%400 == 0){
+//         printf("閏年です。\n");
+//     }else if(year%100 == 0){
+//         printf("閏年ではありません。\n");
+//     }else if(year%4 == 0){
+//         printf("閏年です。\n");
+//     }
+// }
+
+
+// 練習 ポイント計算とランク表示システム
 #include <stdio.h>
 
-void main(){
-    printf("西暦を入力してください。\n");
-    int year;
-    scanf("%d", &year);
-    if(year%400 == 0){
-        printf("閏年です。\n");
-    }else if(year%100 == 0){
-        printf("閏年ではありません。\n");
-    }else if(year%4 == 0){
-        printf("閏年です。\n");
+int main(void){
+
+    /*　練習1
+        ポイント計算(商品単価は均一)
+        100円毎に１ポイント加算
+        合計金額を入力で取得する */
+
+    // int price = 100; // 商品の単価
+    // int quantity; // 商品の個数
+    // int total; // 合計金額
+
+    // printf("お買い上げ個数を入力してください。\n");
+    // scanf("%d", &quantity);
+    // total = price * quantity;
+    // int point = total/100;
+
+    // printf("お買い上げ金額：%d円\n加算ポイント：%dポイント\n", total, point);
+
+
+
+    /*　練習2
+        合計金額を入力しポイントを計算
+        何円で何ポイントか設定可能
+        金額ごとにランク設定可能　*/
+
+    int total; // 合計金額
+    int subject = 100; // ポイントの対象金額
+    int point = 1; // 加算ポイント数
+
+
+    printf("合計金額を入力：");
+    scanf("%d", &total);
+    int addPoint = (total/subject) * point;
+    printf("合計金額：%d円\n加算ポイント：%dポイント\n", total, addPoint);
+    printf("(※%d円ごとに%dポイント付与)\n", subject, point);
+
+    char obj1[] = "現在お客様は「";
+    char obj3[] = "」です。";
+
+    int rank1 = 3000;
+    int rank2 = 6000;
+    int rank3 = 10000;
+
+    if(total >= rank3){
+        char obj2[] = "プラチナ会員";
+        printf("%s%s%s\n", obj1, obj2, obj3);
+    }else if(total >= rank2 && total < rank3){
+        char obj2[] = "シルバー会員";
+        printf("%s%s%s\n", obj1, obj2, obj3);
+    }else{
+        char obj2[] = "ブロンズ会員";
+        if(total >= rank1 && total < rank2){
+            printf("%s%s%s\n", obj1, obj2, obj3);
+        }else{
+            printf("合計金額%d円以上で%sになれます。\n", rank1, obj2);
+        }
     }
+
+
+    // if(total >= 3000 && total < 6000){
+    //     printf("ブロンズ会員\n");
+    // }else if(total >= 6000 && total < 10000){
+    //     printf("シルバー会員\n");
+    // }else if(total >= 10000){
+    //     // printf("プラチナ会員\n");
+    //     printf("%s\n", cliche);
+    // }else{
+    //     printf("合計金額3000円以上でブロンズ会員になれます。\n");
+    // }
 }
