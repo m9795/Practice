@@ -227,14 +227,14 @@
 
 
 // 練習 ポイント計算とランク表示システム
-#include <stdio.h>
+// #include <stdio.h>
 
-int main(void){
+// int main(void){
 
     /*　練習1
         ポイント計算(商品単価は均一)
         100円毎に１ポイント加算
-        合計金額を入力で取得する */
+        購入個数を入力で取得する */
 
     // int price = 100; // 商品の単価
     // int quantity; // 商品の個数
@@ -254,38 +254,38 @@ int main(void){
         何円で何ポイントか設定可能
         金額ごとにランク設定可能　*/
 
-    int total; // 合計金額
-    int subject = 100; // ポイントの対象金額
-    int point = 1; // 加算ポイント数
+    // int total; // 合計金額
+    // int subject = 100; // ポイントの対象金額
+    // int point = 1; // 加算ポイント数
 
 
-    printf("合計金額を入力：");
-    scanf("%d", &total);
-    int addPoint = (total/subject) * point;
-    printf("合計金額：%d円\n加算ポイント：%dポイント\n", total, addPoint);
-    printf("(※%d円ごとに%dポイント付与)\n", subject, point);
+    // printf("合計金額を入力：");
+    // scanf("%d", &total);
+    // int addPoint = (total/subject) * point;
+    // printf("合計金額：%d円\n加算ポイント：%dポイント\n", total, addPoint);
+    // printf("(※%d円ごとに%dポイント付与)\n", subject, point);
 
-    char obj1[] = "現在お客様は「";
-    char obj3[] = "」です。";
+    // char obj1[] = "現在お客様は「";
+    // char obj3[] = "」です。";
 
-    int rank1 = 3000;
-    int rank2 = 6000;
-    int rank3 = 10000;
+    // int rank1 = 3000;
+    // int rank2 = 6000;
+    // int rank3 = 10000;
 
-    if(total >= rank3){
-        char obj2[] = "プラチナ会員";
-        printf("%s%s%s\n", obj1, obj2, obj3);
-    }else if(total >= rank2 && total < rank3){
-        char obj2[] = "シルバー会員";
-        printf("%s%s%s\n", obj1, obj2, obj3);
-    }else{
-        char obj2[] = "ブロンズ会員";
-        if(total >= rank1 && total < rank2){
-            printf("%s%s%s\n", obj1, obj2, obj3);
-        }else{
-            printf("合計金額%d円以上で%sになれます。\n", rank1, obj2);
-        }
-    }
+    // if(total >= rank3){
+    //     char obj2[] = "プラチナ会員";
+    //     printf("%s%s%s\n", obj1, obj2, obj3);
+    // }else if(total >= rank2 && total < rank3){
+    //     char obj2[] = "シルバー会員";
+    //     printf("%s%s%s\n", obj1, obj2, obj3);
+    // }else{
+    //     char obj2[] = "ブロンズ会員";
+    //     if(total >= rank1 && total < rank2){
+    //         printf("%s%s%s\n", obj1, obj2, obj3);
+    //     }else{
+    //         printf("合計金額%d円以上で「%sになれます。\n", rank1, obj2);
+    //     }
+    // }
 
 
     // if(total >= 3000 && total < 6000){
@@ -298,4 +298,40 @@ int main(void){
     // }else{
     //     printf("合計金額3000円以上でブロンズ会員になれます。\n");
     // }
+// }
+
+
+// #include <stdio.h>
+
+// // 演算子を用いた計算のプログラム
+
+// void main(){
+//     // 足し算
+//     printf("%d + %d = %d\n", 5, 2, 5+2);
+//     // 引き算
+//     printf("%d - %d = %d\n", 5, 2, 5-2);
+//     // 掛け算
+//     printf("%d * %d = %d\n", 5, 2, 5*2);
+//     // 割り算
+//     printf("%d / %d = %d 余り %d\n", 5, 2, 5/2, 5%2);
+// }
+
+#include <stdio.h>
+/*
+    変数を用いた計算
+    変数は何度も値を
+*/
+
+void main() {
+    int a;        // 変数の宣言
+    int b = 3;    // 初期化と導入を同時に行う
+    int add, sub; // 複数の変数を同時に宣言
+    double avg;   // int以外の変数を宣言
+    a = 6;        // 代入　（最初に値を入れることを"初期化"という）
+    add = a + b;  // 和
+    sub = a - b;  // 差
+    avg = (a + b) / 2.0; //平均値
+    printf("%d + %d = %d\n", a, b, add);
+    printf("%d - %d = %d\n", a, b, sub);
+    printf("%dと%dの平均値：%f\n", a, b, avg);
 }
