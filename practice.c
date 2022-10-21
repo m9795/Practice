@@ -341,23 +341,73 @@
 // }
 
 
-#include <stdio.h>
-// 代入演算子を用いた計算
+// #include <stdio.h>
+// // 代入演算子を用いた計算
+// void main() {
+//     int a1=2, b1=2, c1=2, d1=2;
+//     int a2=2, b2=2, c2=2, d2=2;
+//     // 普通の演算による計算と代入
+//     a1 = a1 + 1;
+//     b1 = b1 - 1;
+//     c1 = c1 * 2;
+//     d1 = d1 / 2;
 
-void main() {
-    int a1=2, b1=2, c1=2, d1=2;
-    int a2=2, b2=2, c2=2, d2=2;
-    // 普通の演算による計算と代入
-    a1 = a1 + 1;
-    b1 = b1 - 1;
-    c1 = c1 * 2;
-    d1 = d1 / 2;
-    
-    // 代入演算による計算
-    a2 += 1;
-    b2 -= 1;
-    c2 *= 2;
-    d2 /= 2;
-    printf("a1=%d b1=%d c1=%d d1=%d\n", a1, b1, c1, d1);
-    printf("a2=%d b2=%d c2=%d d2=%d\n", a2, b2, c2, d2);
-}
+//     // 代入演算による計算
+//     a2 += 1;
+//     b2 -= 1;
+//     c2 *= 2;
+//     d2 /= 2;
+//     printf("a1=%d b1=%d c1=%d d1=%d\n", a1, b1, c1, d1);
+//     printf("a2=%d b2=%d c2=%d d2=%d\n", a2, b2, c2, d2);
+// }
+
+
+// // 型変換(キャスト)
+// #include <stdio.h>
+
+// void main() {
+//     int i1, i2, j1, j2;
+//     double d1, d2, e1, e2;
+//     j1 = 3;
+//     j2 = 3;
+//     d1 = 1.23;
+//     d2 = 1.23;
+//     i1 = d1;        // 普通に代入
+//     i2 = (int)d2;   // キャストして代入(double → int)
+//     /*  d2をi2に代入。doubleからintになるので小数点以下は切り捨てて1になる
+//         桁落ちなどデータの一部が損なわれる可能性があるためキャストが必要
+//         キャストがなくても同じ結果だが警告が出る(doubleからintの変換の場合) */
+//     e1 = j1;
+//     e2 = (double)j2; // キャストして代入(int → double)
+//     printf("d1 = %f d2 = %f\n", d1, d2);
+//     printf("i1 = %d i2 = %d\n", i1, i2);
+//     printf("j1 = %d j2 = %d\n", j1, j2);
+//     printf("e1 = %f e2 = %f\n", e1, e2);
+// }
+
+// 練習2-1
+// #include <stdio.h>
+
+// void main() {
+//     int a, b;
+//     printf("a=");
+//     scanf("%d", &a);
+//     printf("b=");
+//     scanf("%d", &b);
+//     printf("a + b = %d\n", a+b);
+//     printf("a - b = %d\n", a-b);
+//     printf("a * b = %d\n", a*b);
+//     printf("a / b = %d\n", a/b);
+//     printf("a %% b = %d\n", a%b);
+// }
+
+// 練習2-2
+// #include <stdio.h>
+// void main() {
+//     int a, b;
+//     printf("長方形の長さ：");
+//     scanf("%d", &a);
+//     printf("長方形の高さ:");
+//     scanf("%d", &b);
+//     printf("長方形の面積は、%dm2です。\n", a*b);
+// }
