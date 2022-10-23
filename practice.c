@@ -411,3 +411,103 @@
 //     scanf("%d", &b);
 //     printf("長方形の面積は、%dm2です。\n", a*b);
 // }
+
+// 繰り返し処理
+// for文
+// #include <stdio.h>
+
+// void main() {
+//     int i;
+//     for(i = 1;i <= 5; i++){
+//         printf("%d ", i);
+//     }
+//     printf("\n");
+// }
+
+// 二重ループ 3回x2回での6回ループ(多重ループ)
+// #include <stdio.h>
+
+// void main() {
+//     int i, j;
+//     for(i = 1; i <= 2; i++) {
+//         for(j = 1; j <= 3; j++) {
+//             printf("%d+%d=%d ", i, j, i+j);
+//         }
+//         printf("\n");
+//     }
+// }
+
+// while(ホワイル)文
+// #include <stdio.h>
+
+// void main() {
+//     int i = 0;
+//     while(i <= 5) {
+//         printf("%d ",i);
+//         i++;
+//     }
+//     printf("\n");
+// }
+
+/* for文とwhile文の違い
+インクリメント・デクリメントの処理や
+初期値を設定する処理がループ内に存在しないこと */
+
+// do ~ while文
+// #include <stdio.h>
+
+// // iを用いたループ
+// void main() {
+//     int i = 0;
+//     do{
+//         printf("%d ", i);
+//         i++;
+//     } while(i <= 5);
+//     printf("\n");
+// }
+
+// #include <stdio.h>
+
+// void main() {
+//     int i, num;
+//     printf("回数を入力：");
+//     scanf("%d", &num); // キーボードからループ回数入力
+//     // whileループで実行
+//     printf("whileで実行\n");
+//     i = 1;
+//     while(i <= num){
+//         printf("*");
+//         i++;
+//     }
+//     printf("\n");
+//     // do ~ whileループで実行
+//     printf("do~whileで実行\n");
+//     i = 1;
+//     do{
+//         printf("*");
+//         i++;
+//     }while(i <= num);
+//     printf("\n");
+// }
+
+/* whileとdo~while文の違いは条件を確認するタイミングが違うため、
+do~while文は仮に条件を満たしていなくても最低１回は処理が実行される。*/
+// do~while文は上記コードで0回ループを指定しても1回実行される
+
+// 無限ループ
+// #include <stdio.h>
+
+// // iを用いたループ
+// void main() {
+//     int num;
+//     printf("負の値で、ループから抜けます。\n");
+//     while(1) {
+//         printf("数値を入力：");
+//         scanf("%d", &num);
+//         if(num < 0 ){
+//             // ループから抜ける処理
+//             break;
+//         }
+//     }
+//     printf("終了\n");
+// }
