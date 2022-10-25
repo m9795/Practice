@@ -511,3 +511,22 @@ do~while文は仮に条件を満たしていなくても最低１回は処理が
 //     }
 //     printf("終了\n");
 // }
+
+// 乱数の練習
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(void) {
+    printf("RAND_MAX: %d\n", RAND_MAX);
+
+    // 0から214748364までの乱数を発生
+    for(int i = 0; i < 3; i++) {
+        printf("%d\n", rand());
+    }
+
+    // 1から10までの乱数を発生
+    for(int i = 0; i < 3; i++){
+        printf("%d\n", rand() % 10 + 1);
+    }
+    return 0;
+}
