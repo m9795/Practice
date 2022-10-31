@@ -515,18 +515,56 @@ do~while文は仮に条件を満たしていなくても最低１回は処理が
 // 乱数の練習
 #include <stdio.h>
 #include <stdlib.h>
+#include <time.h>
+#include <unistd.h>
 
 int main(void) {
     printf("RAND_MAX: %d\n", RAND_MAX);
+    printf("\n");
+    printf("乱数を初期化せず3回繰り返す\n");
 
-    // 0から214748364までの乱数を発生
     for(int i = 0; i < 3; i++) {
-        printf("%d\n", rand());
+        srand(1); // 乱数の初期化
+        printf("%d回目の乱数発生：", i + 1);
+
+        // 0から2147483647までの乱数を発生
+        for(int j = 0; j < 3; j++) {
+            printf("%d, ", rand());
+        }
+        printf("\n");
     }
 
-    // 1から10までの乱数を発生
-    for(int i = 0; i < 3; i++){
-        printf("%d\n", rand() % 10 + 1);
+    printf("乱数を初期化し3回繰り返す(1秒待機する)\n");
+    for(int i = 0; i < 3; i++) {
+        srand((unsigned int)time(NULL)); // 現在時刻の情報で初期化
+        printf("%d回目の乱の発生：", i + 1);
+
+        // 0から2147483647までの乱数を発生
+        for(int j = 0; j < 3; j++) {
+            printf("%d, ", rand());
+        }
+        sleep(1); // titme関数で取得する時刻を変えるために１秒待機
+        printf("\n");
     }
+
+    printf("10までの乱数を初期化して3回繰り返す\n");
+    for(int i = 0; i < 3; i++) {
+        srand((unsigned int)time(NULL)); // 現在時刻の情報で初期化
+        printf("%d回目の乱数発生：", i + 1);
+
+        // 1から10までの乱数を発生
+        for(int j = 0; j < 3; j++) {
+            printf("%d, ", rand() % 10 + 1);
+        }
+        sleep(1); // time関数で取得する時刻を変えるために1秒待機
+        printf("\n");
+    }
+
     return 0;
 }
+
+/*
+time関数は秒単位なので１秒以内で終了する場合は同じ歴時刻を取得してしまうので
+1秒スリープすることで違う歴時刻にし、違う乱数を取得している。
+time関数は「time.h」を、sleep関数は「unistd.h」インクルードする必要がある。
+*/
