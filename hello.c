@@ -168,15 +168,75 @@
 //     printf("*************************\n");
 //   }
 
-#include <stdio.h>
-#include "calc.h"
+// #include <stdio.h>
+// #include "calc.h"
 
-void main(){
-  double d1,d2,d3;
-  double a = 1.2,b = 3.4,c = 2.7;
-  // 同じ計算が3回(関数を呼び出して計算)
-  d1 = avg(a,b);
-  d2 = avg(4.1,5.7);
-  d3 = avg(c,2.8);
-  printf("d1 = %f,d2 = %f,d3 = %f\n",d1,d2,d3);
-}
+// void main(){
+//   double d1,d2,d3;
+//   double a = 1.2,b = 3.4,c = 2.7;
+//   // 同じ計算が3回(関数を呼び出して計算)
+//   d1 = avg(a,b);
+//   d2 = avg(4.1,5.7);
+//   d3 = avg(c,2.8);
+//   printf("d1 = %f,d2 = %f,d3 = %f\n",d1,d2,d3);
+// }
+
+
+// 分割の練習(元ファイル)
+// #include <stdio.h>
+// // 計算の答え（グローバル変数）
+// int ans = 0;
+
+// void add(int,int);
+// void sub(int,int);
+// void showAnswer();
+
+// void main(){
+//   int a = 2,b = 3;
+//   printf("%d + %d = ",a,b);
+//   add(a,b);
+//   showAnswer();
+//   printf("%d - %d = ",a,b);
+//   sub(a,b);
+//   showAnswer();
+// }
+
+// void add(int a,int b){
+//   ans = a + b;
+// }
+
+// void sub(int a,int b){
+//   ans = a - b;
+// }
+
+// void showAnswer(){
+//   printf("%d\n",ans);
+// }
+
+
+// 分割練習(分割ファイル)
+// #include <stdio.h>
+// #include "calc.h"
+// #include "showResult.h"
+
+// void main(){
+//   int a = 2,b = 3;
+//   printf("%d + %d = ",a,b);
+//   add(a,b);
+//   showAnswer();
+//   printf("%d - %d = ",a,b);
+//   sub(a,b);
+//   showAnswer();
+// }
+
+/* コンパイル　コマンド覚書
+
+オブジェクトファイル作成
+ gcc -c hello.c
+ gcc -c calc.c
+ gcc -c showResult.c
+
+gcc hello.o calc.o showResult.o -o hello
+./hello
+
+*/
