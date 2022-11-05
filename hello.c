@@ -240,3 +240,38 @@ gcc hello.o calc.o showResult.o -o hello
 ./hello
 
 */
+
+// 乱数
+// #include <stdio.h>
+// #include <stdlib.h>
+// #include <time.h>
+
+// void main(){
+//   int a,b;
+//   // 乱数の初期化
+//   srand((unsigned) time(NULL));
+//   // 1から10までの乱数を発生させる
+//   a = rand() % 10 + 1;
+//   b = rand() % 10 + 1;
+//   // 計算結果を出力
+//   printf("%d + %d = %d\n",a,b,a+b);
+// }
+
+// 数学関数
+#include <stdio.h>
+#include <math.h>
+
+#define PI 3.14
+
+void main(){
+  int angle;
+  double rad;
+  printf("角度を入力してください(0~360):");
+  scanf("%d",&angle);
+  // 角度をラジアンに変換
+  rad = PI * (double)angle / 180.0;
+  // 三角関数での計算
+  printf("sin(%d)=%f\n",angle,sin(rad));
+  printf("cos(%d)=%f\n",angle,cos(rad));
+  printf("tan(%d)=%f\n",angle,tan(rad));
+}
