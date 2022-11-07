@@ -258,20 +258,42 @@ gcc hello.o calc.o showResult.o -o hello
 // }
 
 // 数学関数
+// #include <stdio.h>
+// #include <math.h>
+
+// #define PI 3.14
+
+// void main(){
+//   int angle;
+//   double rad;
+//   printf("角度を入力してください(0~360):");
+//   scanf("%d",&angle);
+//   // 角度をラジアンに変換
+//   rad = PI * (double)angle / 180.0;
+//   // 三角関数での計算
+//   printf("sin(%d)=%f\n",angle,sin(rad));
+//   printf("cos(%d)=%f\n",angle,cos(rad));
+//   printf("tan(%d)=%f\n",angle,tan(rad));
+// }
+
+/* コンパイル　コマンド覚書
+  math.h利用時のコンパイルは-lmオプションが必要
+（数学ライブラリをリンクすることで数学ライブラリが使えるようになる。）
+  l→リンクの意
+  m→数学ライブラリの意
+
+コマンド
+gcc -o xxx xxx.c -lm
+*/
+
 #include <stdio.h>
 #include <math.h>
 
-#define PI 3.14
-
 void main(){
-  int angle;
-  double rad;
-  printf("角度を入力してください(0~360):");
-  scanf("%d",&angle);
-  // 角度をラジアンに変換
-  rad = PI * (double)angle / 180.0;
-  // 三角関数での計算
-  printf("sin(%d)=%f\n",angle,sin(rad));
-  printf("cos(%d)=%f\n",angle,cos(rad));
-  printf("tan(%d)=%f\n",angle,tan(rad));
+  int n = -2;
+  double d1 = -2.5,d2 = 4.0;
+  printf("%dの絶対値は%d\n",n,abs(n));
+  printf("%fの絶対値は%f\n",d1,fabs(d1));
+  printf("%fの2乗は%fです。\n",d2,pow(d2,2));
+  printf("%fの平方根は%fです。\n",d2,sqrt(d2));
 }
