@@ -286,14 +286,41 @@ gcc hello.o calc.o showResult.o -o hello
 gcc -o xxx xxx.c -lm
 */
 
+// #include <stdio.h>
+// #include <stdlib.h> // abs関数に使用
+// #include <math.h>   // コンパイル時-lmオプション必要
+
+// void main(){
+//   int n = -2;
+//   double d1 = -2.5,d2 = 4.0;
+//   printf("%dの絶対値は%d\n",n,abs(n));
+//   printf("%fの絶対値は%f\n",d1,fabs(d1));
+//   printf("%fの2乗は%fです。\n",d2,pow(d2,2));
+//   printf("%fの平方根は%fです。\n",d2,sqrt(d2));
+// }
+
+
+// ビット演算
+// #include <stdio.h>
+// #include <stdlib.h>
+
+// void main(){
+//   // 16進数
+//   unsigned char i = 0xf;  // 2進数：00001111
+//   unsigned char j = 0xff; // 2進数：11111111
+//   printf("%x << 1 = %x\n",i,i << 1);         // 1ビット左シフト：2進数：00011110 = 0x1e0
+//   printf("%x >> 1 = %x\n",i,i >> 1);         // 1ビット右シフト：2進数：00000111 = 0x7
+//   printf("%x | %x = %x\n",i,j,i | j);        // OR演算：2進数：11111111 = 0xff
+//   printf("%x & %x = %x\n",i,j,i & j);        // AND演算：2進数：00001111 = 0xf
+//   printf("~%x = %x\n",i,(unsigned char)~i);  // NOT演算：2進数：11110000 = 0xf0
+// }
+
 #include <stdio.h>
-#include <math.h>
 
 void main(){
-  int n = -2;
-  double d1 = -2.5,d2 = 4.0;
-  printf("%dの絶対値は%d\n",n,abs(n));
-  printf("%fの絶対値は%f\n",d1,fabs(d1));
-  printf("%fの2乗は%fです。\n",d2,pow(d2,2));
-  printf("%fの平方根は%fです。\n",d2,sqrt(d2));
+  int a = 100;
+  double b = 123.4;
+  float c = 123.4f;
+  char d = 'a';
+  printf("aの値は%d、大きさは%dbyte、アドレスは0x%x\n",a,sizeof(int),&a);
 }
