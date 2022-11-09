@@ -315,12 +315,51 @@ gcc -o xxx xxx.c -lm
 //   printf("~%x = %x\n",i,(unsigned char)~i);  // NOT演算：2進数：11110000 = 0xf0
 // }
 
-#include <stdio.h>
+// #include <stdio.h>
 
-void main(){
-  int a = 100;
-  double b = 123.4;
-  float c = 123.4f;
-  char d = 'a';
-  printf("aの値は%d、大きさは%dbyte、アドレスは0x%x\n",a,sizeof(int),&a);
-}
+// void main(){
+//   int a = 100;       // int型の変数
+//   double b = 123.4;  // double型の変数
+//   float c = 123.4f;  // float型の変数(数値の後ろにfをつける)
+//   char d = 'a';      // char型の変数
+//   printf("aの値は%d、大きさは%dbyte、アドレスは0x%x\n",a,sizeof(int),&a);
+//   printf("bの値は%f、大きさは%dbyte、アドレスは0x%x\n",b,sizeof(double),&b);
+//   printf("cの値は%f、大きさは%dbyte、アドレスは0x%x\n",c,sizeof(float),&c);
+//   printf("dの値は%c、大きさは%dbyte、アドレスは0x%x\n",d,sizeof(char),&d);
+// }
+
+
+
+// ポインタ
+// #include <stdio.h>
+
+// void show(int,int,int);
+
+// void main(){
+//   int a = 100;     // 整数型変数a
+//   int b = 200;     // 整数型変数b
+//   int *p = NULL;   // 整数型のポインタ変数p
+//   // ↑(ポインタ変数はNULL(ヌル)を入れて初期化する)
+//   p = &a;          // pにaのアドレスを代入(pとaは等しくなる)
+//   show(a,b,*p);
+//   *p = 300;        // pとaは同じなのでaも300になる
+//   show(a,b,*p);
+//   p = &b;          // pにbのアドレスを代入(pとbが等しくなり、pとaは等しくなくなる)
+//   show(a,b,*p);
+//   *p = 400;        // *pに値を代入(bも等しい値になる)
+//   show(a,b,*p);
+// }
+
+// void show(int n1,int n2,int n3){
+//   printf("a = %d b = %d *p = %d\n",n1,n2,n3);
+// }
+
+/* メモ
+ポインタの変数にアドレスを設定するときは、原則同じ型のポインタ変数でする
+ 例）int a → int* p;　ならOK
+             cher *p; はNG
+*/
+
+
+
+// ポインタと関数
