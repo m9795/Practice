@@ -363,3 +363,56 @@ gcc -o xxx xxx.c -lm
 
 
 // ポインタと関数
+#include <stdio.h>
+
+// 変数の値入れ替えを行う関数
+// void swap(int*,int*);
+
+// void main(){
+//   int a = 1,b = 2;
+//   printf("a = %d b = %d\n",a,b);
+//   swap(&a,&b);
+//   printf("a = %d b = %d\n",a,b);
+// }
+
+// // 値の入れ替え
+// void swap(int* num1,int* num2){
+//   int temp = *num1;
+//   *num1 = *num2;
+//   *num2 = temp;
+// }
+
+// #include <stdio.h>
+
+// void main(){
+//   // ポインタをNULLで初期化。
+//   int *p = NULL;
+//   // アドレスを指定しないまま値を代入
+//   *p = 1;
+// }
+
+// #include <stdio.h>
+
+// #define SIZE  5      // #difineマクロ　SIZEという文字列に5という数値を置き換えている
+
+// void main(){
+//   // サイズSIZEの配列を用意する。
+//   int ar1[SIZE];
+//   char ar2[SIZE];
+//   int i;
+//   int* p1 = NULL;
+//   char* p2 = NULL;
+//   // 値を代入
+//   for(i = 0; i < SIZE; i++){
+//     ar1[i] = i;
+//     ar2[i] = 'A'+i;
+//   }
+//   // ポインタにアドレスを代入
+//   p1 = &ar1[0];
+//   p2 = &ar2[0];
+//   // 値を出力
+//   for(i = 0; i < SIZE; i++){
+//     printf("ar1[%d]=%d * (p1+%d)=%d ",i,ar1[i],i,*(p1+i));
+//     printf("ar2[%d]=%c * (p2+%d)=%c\n ",i,ar2[i],i,*(p2+i));
+//   }
+// }
