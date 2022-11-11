@@ -530,3 +530,140 @@ gcc -o xxx xxx.c -lm
 //   puts(s2);
 // }
 
+
+// // 構造体
+// #include <stdio.h>
+// #include <string.h>
+
+// // 学生のデータを入れる構造体
+// struct student{    // 構造体の名前がstudent
+//   int id;          // 学生番号
+//   char name[256];  // 名前
+//   int age;         // 年齢
+// };                 // ;で終了
+
+// void main(){
+//   struct student data;
+//   data.id = 1;                    // 学生番号を設定
+//   strcpy(data.name,"山田太郎");   // 名前を設定
+//   data.age = 18;                  // 年齢を設定
+//   // データ上書き
+//   data.id = 2;
+//   strcpy(data.name,"山田花子");
+//   data.age = 17;
+//   // データの内訳を表示
+//   printf("学生番号：%d\n名前： %s\n年齢：%d\n",data.id,data.name,data.age);
+// }
+
+// #include <stdio.h>
+// #include <string.h>
+
+// // 学生のデータを入れる構造体
+// struct student{
+//   int id;
+//   char name[256];
+//   int age;
+// };
+
+// // 構造体の名前をtypedefで定義
+// typedef struct student student_data;
+
+// void main(){
+//   int i;
+//   student_data data[] = {
+//     { 1,"山田太郎",18 },
+//     { 2,"佐藤良子",19 },
+//     { 3,"太田　剛",18 },
+//     { 4,"中田裕子",18 }
+//   };
+//   // データの内訳を表示
+//   for(i = 0; i < 4; i++){
+//     printf("学生番号：%d 名前：%s 年齢：%d\n",data[i].id,data[i].name,data[i].age);
+//   }
+// }
+
+
+// 構造体のポインタ
+// #include <stdio.h>
+// #include <string.h>
+
+// // 学生のデータを入れる構造体
+// typedef struct{
+//   int id;
+//   char name[256];
+//   int age;
+// }student_data;
+
+// // 構造体のデータを表示する関数
+// void setData(student_data*,int,char*,int);
+// void showData(student_data*);
+
+// void main(){
+//   student_data data[4];
+//   int i;
+//   int id[] = { 1,2,3,4 };
+//   char name[][256] = { "山田太郎","佐藤良子","太田　剛","中田優子" };
+//   int age[] = { 18,19,18,18 };
+//   // データの設定
+//   for(i = 0; i < 4; i++){
+//     setData(&data[i],id[i],name[i],age[i]);
+//   }
+//   // データの内訳を表示
+//   for(i = 0; i < 4; i++){
+//     showData(&data[i]);
+//   }
+//   return;
+// }
+// // データのセット
+// void setData(student_data* data,int id,char* name,int age){
+//   data->id = id;            // idのコピー
+//   strcpy(data->name,name);  // 名前のコピー
+//   data->age = age;          // 年齢のコピー
+// }
+// // データの表示
+// void showData(student_data* data){
+//   printf("学生番号：%d 名前：%s 年齢：%d\n",data->id,data->name,data->age);
+// }
+
+
+// ポインタ渡しとデータ渡し
+// #include <stdio.h>
+
+// // データを入れる構造体
+// typedef struct{
+//   int a;
+//   double d;
+// }num_data;
+
+// // 二種類の値設定関数
+// void dealData1(num_data data);    // 値渡し
+// void dealData2(num_data* pData);  // ポインタ渡し
+
+// void main(){
+//   num_data n1 = { 1, 1.2f },n2 = { 1, 1.2f };
+//   printf("n1のアドレス：0x%x n2のアドレス：0x%x\n",&n1,&n2);
+//   dealData1(n1);
+//   dealData2(&n2);
+//   printf("n1.a = %d n2.d = %f\n",n1.a,n1.d);
+//   printf("n2.a = %d n2.d = %f\n",n2.a,n2.d);
+// }
+
+// void dealData1(num_data data)
+// {
+//   printf("a=%d f=%f\n",data.a,data.d);
+//   printf("dealData1に渡ってきたデータのアドレス：0x%x\n",&data);
+//   // 値の変更
+//   data.a = 2;
+//   data.d = 2.4;
+// }
+// void dealData2(num_data* pData)
+// {
+//   printf("a=%d f=%f\n",pData->a,pData->d);
+//   printf("dealData2に渡ってきたデータのアドレス：0x%x\n",pData);
+//   // 値の変更
+//   pData->a = 2;
+//   pData->d = 2.4;
+// }
+
+
+// テキストファイルの書き込み
