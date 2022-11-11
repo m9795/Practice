@@ -461,3 +461,72 @@ gcc -o xxx xxx.c -lm
 //   free(p1);
 //   free(p2);
 // }
+
+
+// 文字列の関数
+
+// #include <stdio.h>
+// #include <string.h>
+
+// void main(){
+//   char s[10];
+//   int len;
+//   // 文字列のコピー
+//   strcpy(s,"ABC");
+//   printf("s=%s\n",s);  // s=ABC
+//   // 文字列の結合
+//   strcat(s,"DEF");
+//   printf("s=%s\n",s);  // S=ABCDEF
+//   // 文字列の長さ
+//   len = strlen(s);
+//   printf("sの最終的な文字列の長さ：%d\n",len);
+// }
+
+
+// 文字列の比較
+
+// #include <stdio.h>
+// #include <string.h>
+
+// void main(){
+//   char s1[256],s2[256];
+//   printf("s1=");
+//   scanf("%s",s1);
+//   printf("s2=");
+//   scanf("%s",s2);
+//   if(strcmp(s1,s2)==0){           // strcamp()関数　文字列の比較
+//     printf("s1とs2は等しい\n");
+//   }else{
+//     printf("s1とs2は等しくない\n");
+//   }
+// }
+
+
+// 数値・文字列への変換
+// #include <stdio.h>
+// #include <stdlib.h>
+
+// void main(){
+//   char s1[] = "1000";
+//   char s2[] = "12.345";
+//   int a;
+//   double b;
+//   a = atoi(s1);     // atoi()関数...文字列を整数(int)に変える
+//   b = atof(s2);     // atof()関数...文字列を実数(double)に変える
+//   printf("a=%d b=%f\n",a,b);
+// }
+
+// 数値から文字列への変換
+
+// #include <stdio.h>
+// #include <stdlib.h>
+
+// void main(){
+//   char s1[256],s2[256];
+//   int a = 100,b = 200;
+//   sprintf(s1,"%d",a);
+//   sprintf(s2,"bの値は%dです。",b);
+//   puts(s1);
+//   puts(s2);
+// }
+
