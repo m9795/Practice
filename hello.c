@@ -667,3 +667,18 @@ gcc -o xxx xxx.c -lm
 
 
 // テキストファイルの書き込み
+#include <stdio.h>
+#include <stdlib.h>
+
+void main(){
+  FILE *file;
+  file = fopen("c:test\\sample.txt","w");
+  if (file == NULL) {
+    printf("ファイルが開けません\n");
+    exit(1);
+  }
+  // ファイルにデータを書き込む
+  fprintf(file,"Hello World.\r\n");
+  fprintf(file,"ABCDEF\r\n");
+  fclose(file);
+}
