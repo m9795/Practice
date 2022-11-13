@@ -672,7 +672,7 @@ gcc -o xxx xxx.c -lm
 
 void main(){
   FILE *file;
-  file = fopen("c:test\\sample.txt","w");
+  file = fopen("test/sample.txt","w");
   if (file == NULL) {
     printf("ファイルが開けません\n");
     exit(1);
