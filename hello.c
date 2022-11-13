@@ -667,18 +667,98 @@ gcc -o xxx xxx.c -lm
 
 
 // テキストファイルの書き込み
-#include <stdio.h>
-#include <stdlib.h>
+// #include <stdio.h>
+// #include <stdlib.h>
 
-void main(){
-  FILE *file;
-  file = fopen("test/sample.txt","w");
-  if (file == NULL) {
-    printf("ファイルが開けません\n");
-    exit(1);
-  }
-  // ファイルにデータを書き込む
-  fprintf(file,"Hello World.\r\n");
-  fprintf(file,"ABCDEF\r\n");
-  fclose(file);
-}
+// void main(){
+//   FILE *file;
+//   file = fopen("test/sample.txt","w");
+//   if (file == NULL) {
+//     printf("ファイルが開けません\n");
+//     exit(1);
+//   }
+//   // ファイルにデータを書き込む
+//   fprintf(file,"Hello World.\r\n");
+//   fprintf(file,"ABCDEF\r\n");
+//   fclose(file);
+// }
+
+
+// 上で作成したファイルを読み込み画面表示する
+// #include <stdio.h>
+// #include <stdlib.h>
+
+// #define SIZE  256
+
+// void main(){
+//   FILE *file;
+//   char line[SIZE];
+//   line[0] = '\0';
+//   file = fopen("test/sample.txt", "r");
+//   if (file == NULL){
+//     printf("ファイルが開けません。\n");
+//     exit(1);
+//   }
+//   // ファイルのデータを読み込む
+//   while ( fgets(line, SIZE, file) != NULL ){
+//     printf("%s", line);
+//   }
+//   fclose(file);
+// }
+
+
+// 1文字ごとにファイルの読み込み
+// #include <stdio.h>
+// #include <stdlib.h>
+
+// void main(){
+//   FILE *file;
+//   int c;
+//   file = fopen("test/sample.txt", "r");
+//   if(file == NULL){
+//     printf("ファイルが開けません。\n");
+//     exit(1);
+//   }
+//   // ファイルのデータを読み込む
+//   while ( (c=fgetc(file)) != EOF){
+//     printf("%c", (char)c);
+//   }
+//   fclose(file);
+// }
+
+
+// バイナリファイルの読み書き
+// #include <stdio.h>
+// #include <stdlib.h>
+
+// void main() {
+//   FILE* file;
+//   int i;
+//   // 書き込むデータ
+//   char wdata[] = { 0x10 , 0x1a , 0x1e , 0x1f };
+//   char rdata[4];
+//   // バイナリデータの書き込み
+//   file = fopen("test/test.bin", "wb");
+//   if( file == NULL ){
+//     printf("ファイルオープンに失敗しました。\n");
+//     exit(1);
+//   }
+//   fwrite( wdata, sizeof(char), sizeof(wdata), file);
+//   fclose(file);
+//   // バイナリデータの書き込み
+//   file = fopen("test/test.bin", "rb");
+//   if( file == NULL ){
+//     printf("ファイルオープンに失敗しました。\n");
+//     exit(1);
+//   }
+//   fread( rdata, sizeof(char), sizeof(rdata), file );
+//   fclose(file);
+//   // 結果を表示
+//   for(i = 0; i < sizeof(rdata) ; i++){
+//     printf("%x ",rdata[i]);
+//   }
+//   printf("\n");
+// }
+
+
+// 大きさのわからないファイルの読み込み
