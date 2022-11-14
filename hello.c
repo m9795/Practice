@@ -363,7 +363,7 @@ gcc -o xxx xxx.c -lm
 
 
 // ポインタと関数
-#include <stdio.h>
+// #include <stdio.h>
 
 // 変数の値入れ替えを行う関数
 // void swap(int*,int*);
@@ -761,4 +761,41 @@ gcc -o xxx xxx.c -lm
 // }
 
 
+
 // 大きさのわからないファイルの読み込み
+// #include <stdio.h>
+// #include <stdlib.h>
+
+// void main(){
+//   FILE* file;
+//   int i, size;
+//   // 書き込むデータ
+//   char* rdata;
+//   // バイナリデータの書き込み
+//   file = fopen("test/test.bin", "rb");
+//   if(file == NULL){
+//     printf("ファイルオープンに失敗しました。\n");
+//     exit(1);
+//   }
+//   // ファイルの最後までシーク
+//   fseek(file, 0, SEEK_END);
+//   // ファイルの大きさを取得
+//   size = ftell(file);
+//   // メモリのサイズだけ、配列を動的に生成
+//   rdata = (char*)malloc(sizeof(char)*size);
+//   // ファイルの最後までポインタを戻す
+//   fseek(file, 0, SEEK_SET);
+//   fread(rdata, sizeof(char), size, file);
+//   fclose(file);
+//   // 結果を表示
+//   for(i = 0; i < size; i++){
+//     printf("%x ",rdata[i]);
+//   }
+//   printf("\n");
+//   // メモリの開放
+//   free(rdata);
+// }
+
+
+
+// 複雑なファイル分割
