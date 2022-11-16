@@ -817,3 +817,36 @@ gcc -o xxx xxx.c -lm
 //     showStudentData(get(i+1));
 //   }
 // }
+
+
+// 列挙型 enumの練習
+// enum GENDER{  // 性別の定義
+//   MALE,       // 男性　値は0
+//   FEMALE,     // 女性　値は1
+// };
+
+// enum COLOR{ // 色の定義
+//   RED=1,    // 赤　値は１
+//   BLUE=2,   // 青　値は2
+//   GREEN=3,  // 緑　値は3
+// };
+
+
+// static変数
+// #include <stdio.h>
+
+// void foo();
+
+// void main(){
+//   int i;
+//   for(i = 0; i < 4; i++){
+//     foo();
+//   }
+// }
+
+// void foo()
+// {
+//   static int num = 0;
+//   printf("num=%d\n",num);
+//   num++;
+// }
