@@ -850,3 +850,34 @@ gcc -o xxx xxx.c -lm
 //   printf("num=%d\n",num);
 //   num++;
 // }
+
+
+// 復習
+#include <stdio.h>    // 「#include」文→ヘッダファイルを読み込む命令文
+
+/*
+  Visual C++でのみ読み込まれるように
+  プリプロセッサディレクティブの「#ifdef」を使用している
+*/
+#ifdef _MSC_VER
+#include <conio.h>
+#endif
+
+/*
+  メイン関数→プログラムのスタート地点になる関数。プログラムが起動すると実行される。
+  「int」型の戻り値を持つ。
+*/
+int main(int argc, char *argv[])
+{
+  // 文字列を出力する
+  printf("Hello World!\n");
+
+// Visual C++でのみ読み込まれる
+#ifdef _MSC_VER
+  // キーが押されるまで待機
+  _getch();
+#endif
+
+  // エラーなし
+  return 0;
+}
