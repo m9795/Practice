@@ -1,3 +1,8 @@
+/*
+拡張子は.cpp
+C++のソースファイルにはC言語の関数を直接記述できる
+*/
+
 #include <stdlib.h>
 #include <stdio.h>
 
@@ -18,3 +23,4 @@ int main(int argc, char *argv[])
 
   return 0;
 }
+
