@@ -853,31 +853,75 @@ gcc -o xxx xxx.c -lm
 
 
 // 復習
-#include <stdio.h>    // 「#include」文→ヘッダファイルを読み込む命令文
+// #include <stdio.h>    // 「#include」文→ヘッダファイルを読み込む命令文
 
-/*
-  Visual C++でのみ読み込まれるように
-  プリプロセッサディレクティブの「#ifdef」を使用している
-*/
-#ifdef _MSC_VER
-#include <conio.h>
-#endif
+// /*
+//   Visual C++でのみ読み込まれるように
+//   プリプロセッサディレクティブの「#ifdef」を使用している
+// */
+// #ifdef _MSC_VER
+// #include <conio.h>
+// #endif
 
-/*
-  メイン関数→プログラムのスタート地点になる関数。プログラムが起動すると実行される。
-  「int」型の戻り値を持つ。
-*/
-int main(int argc, char *argv[])
-{
-  // 文字列を出力する
-  printf("Hello World!\n");
+// /*
+//   メイン関数→プログラムのスタート地点になる関数。プログラムが起動すると実行される。
+//   「int」型の戻り値を持つ。
+// */
+// int main(int argc, char *argv[])
+// {
+//   // 文字列を出力する
+//   printf("Hello World!\n");
 
-// Visual C++でのみ読み込まれる
-#ifdef _MSC_VER
-  // キーが押されるまで待機
-  _getch();
-#endif
+// // Visual C++でのみ読み込まれる
+// #ifdef _MSC_VER
+//   // キーが押されるまで待機
+//   _getch();
+// #endif
 
-  // エラーなし
-  return 0;
-}
+//   // エラーなし
+//   return 0;
+// }
+
+// 条件分岐練習
+// #include <stdio.h>
+
+// int main(void)
+// {
+//   /* 変数の宣言 */
+//   int a;
+
+//   /* 数値の入力 */
+//   printf("数値を入力してください = ");
+//   scanf("%d", &a);
+
+//   /* 条件分岐 */
+//   if ( a > 10)
+//     printf("入力した数値は 10 より大きいです。\n");
+//   else if ( a > 5)
+//     printf("入力した数値は 5 より大きいです。\n");
+//   else
+//     printf("入力した数値は 5 以下です。\n");
+
+//   return 0;
+// }
+
+
+// 条件分岐練習2
+// #include <stdio.h>
+
+// int main(void)
+// {
+//   int a;
+
+//   printf("好きな数字を入力してください。\n");
+//   scanf("%d", &a);
+
+//   if (a <= 100 && a > 50){
+//     printf("あなたが入力した数字%d。%dは100以下です。\n",a,a);
+//   }else if(a <= 50){
+//     printf("あなたが入力した数字%d。%dは50以下です。\n",a,a);
+//   }else{
+//     printf("あなたが入力した数字%d。%eは100より大きいです。\n",a,a);
+//   }
+//   return 0;
+// }
