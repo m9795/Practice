@@ -925,3 +925,58 @@ gcc -o xxx xxx.c -lm
 //   }
 //   return 0;
 // }
+
+// 練習
+// #include <stdio.h>
+
+// void main(){
+//   printf("山田太郎\n");
+// }
+
+// #include <stdio.h>
+
+// void main(){
+//   printf("123\n456\n789\n");
+// }
+
+// #include <stdio.h>
+
+// void main(){
+//   printf("%d + %d = %d\n",1,1,1+1);
+//   printf("%d + %d = %d\n",2,3,2+3);
+// }
+
+
+// #include <stdio.h>
+
+// void main(){
+//   printf("%d + %d + %d = %d\n",1,2,3,1+2+3);
+// }
+
+
+// #include <stdio.h>
+
+// void main(){
+//   int a,b;
+//   printf("a = ");
+//   scanf("%d",&a);
+//   printf("b = ");
+//   scanf("%d",&b);
+//   printf("a + b = %d\n", a+b);
+//   printf("a - b = %d\n", a-b);
+//   printf("a * b = %d\n", a*b);
+//   printf("a / b = %d\n", a/b);
+//   printf("a % b = %d\n", a%b);
+// }
+
+// #include <stdio.h>
+
+// void main(){
+//   int a,b;  //  長方形の幅(a)と高さ(b)
+//   printf("長方形の幅：");
+//   scanf("%d",&a);
+//   printf("長方形の高さ：");
+//   scanf("%d",&b);
+//   printf("長方形の面積は、%dm2です。\n",a*b);
+// }
+
