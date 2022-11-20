@@ -980,3 +980,40 @@ gcc -o xxx xxx.c -lm
 //   printf("長方形の面積は、%dm2です。\n",a*b);
 // }
 
+// #include <stdio.h>
+
+// void main(){
+//   int a;
+//   printf("好きな数字を入力してください：");
+//   scanf("%d",&a);
+//   if(a >= 5){
+//     printf("あなたが入力した数字は 5 以上です。\n");
+//   }else {
+//     printf("あなたが入力した数字は 5 より小さいです。\n");
+//   }
+// }
+
+// #include <stdio.h>
+
+// void main(){
+//   int a;
+//   printf("好きな数字を入力して下さい：");
+//   scanf("%d",&a);
+//   if(a != 1){
+//     printf("1ではありません。\n");
+//   }
+// }
+
+// #include <stdio.h>
+// #include <time.h>
+// #include <stdlib.h>
+
+// int main(void){
+//   int n;
+//   srand((unsigned)time(NULL));
+//   n = rand() % 6 + 1;
+//   printf("数値：%d\n",n);
+//   if(n >= 3){
+//     printf("3以上です。\n");
+//   }
+// }
