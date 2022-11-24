@@ -1018,20 +1018,40 @@ gcc -o xxx xxx.c -lm
 //   }
 // }
 
-#include <stdio.h>
-#include <stdlib.h>
-#include <time.h>
+// #include <stdio.h>
+// #include <stdlib.h>
+// #include <time.h>
 
-int main(void){
-  int n;
-  srand((unsigned)time(NULL));
-  n = rand() % -21 - 10;
-  printf("数値：%d\n",n);
-  if(n < 0){
-    printf("負の値です。\n");
-  }else if(n > 0){
-    printf("正の値です。\n");
-  }else{
-    printf("0です。\n");
-  }
-}
+// int main(void){
+//   int n;
+//   srand((unsigned)time(NULL));
+//   n = rand() % -21 - 10;
+//   printf("数値：%d\n",n);
+//   if(n < 0){
+//     printf("負の値です。\n");
+//   }else if(n > 0){
+//     printf("正の値です。\n");
+//   }else{
+//     printf("0です。\n");
+//   }
+// }
+
+// 乱数練習　サイコロ
+// #include <stdio.h>
+// #include <stdlib.h>
+// #include <time.h>
+
+// int main(void) {
+//   int s;
+//   // 乱数の種を初期化
+//   srand(time(NULL));
+
+//   // サイコロを振る
+//   s = rand() % 6 + 1;
+
+//   // サイコロの出目を出力
+//   printf("サイコロの出目 = %d \n", s);
+
+//   return 0;
+// }
+
