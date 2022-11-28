@@ -1055,3 +1055,90 @@ gcc -o xxx xxx.c -lm
 //   return 0;
 // }
 
+
+/* for文 復習
+for ( 初期化処理; 条件式; 増分処理){
+  処理
+}
+*/
+
+// #include <stdio.h>
+// #include <stdlib.h>
+// #include <time.h>
+
+// void main() {
+//   int n,i;
+//   srand(time(NULL));
+
+//   n = rand() % 10 + 1;
+//   printf("数：%d\n", n);
+
+//   for(i = 1; i <= n; i++){
+//     printf("■ ");
+//   }
+//   printf("\n");
+// }
+
+
+/* while文 復習
+while(条件式){
+  処理
+}
+*/
+
+// #include <stdio.h>
+// #include <stdlib.h>
+// #include <time.h>
+
+// void main() {
+//   int n,i;
+//   srand(time(NULL));
+
+//   n = rand() % 10 + 1;
+//   printf("数：%d\n", n);
+//   i = 1;
+//   while(i <= n){
+//     printf("■ ");
+//     i++;
+//   }
+//   printf("\n");
+// }
+
+/* do~while文 復習
+★while文と違い、条件を満たしていなくても最低一回は実行される。
+
+do{
+  処理
+}while(条件式);
+*/
+
+// #include <stdio.h>
+// #include <stdlib.h>
+// #include <time.h>
+
+// void main() {
+//   int n,i;
+//   srand(time(NULL));
+
+//   n = rand() % 10 + 1;
+//   printf("数：%d\n", n);
+
+//   i = 1;
+//   do{
+//     printf("■ ");
+//     i++;
+//   }while(i<=n);
+//   printf("\n");
+// }
+
+
+// #include <stdio.h>
+
+// void main(){
+//   int a;
+//   a = 0;
+//   while(a < 4){
+//     printf("a = %d\n",a);
+//     a++;
+//   }
+// }
