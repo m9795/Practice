@@ -1142,3 +1142,31 @@ do{
 //     a++;
 //   }
 // }
+
+
+/* 文字列の受け取り1
+fgets関数のみで出力すると、改行など余分なデータまで出力されてしまう。*/
+
+// #include <stdio.h>
+
+// int main(void) {
+//   char buf[100];  // buf変数 → 受け取ったデータを一時的にデータを保管する変数
+//   fgets(buf, sizeof(buf), stdin); // fgets(変数, サイズ, 場所);
+//   printf("%s\n", buf);
+// }
+
+
+/* 文字列の受け取り2
+fgets関数で受け取ったデータをsscanf関数で余分なデータを省き別の変数に代入して表示している。
+そのため、改行などの余分なデータが含まれていない。*/
+
+// #include <stdio.h>
+
+// int main(void) {
+//   char buf[100];
+//   fgets(buf, sizeof(buf), stdin);
+
+//   char name[100];
+//   sscanf(buf, "%s", name); // sscanf(元データ, 書式, 変数);
+//   printf("%s\n", name);
+// }
