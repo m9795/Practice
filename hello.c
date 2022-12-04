@@ -1170,3 +1170,16 @@ fgets関数で受け取ったデータをsscanf関数で余分なデータを省
 //   sscanf(buf, "%s", name); // sscanf(元データ, 書式, 変数);
 //   printf("%s\n", name);
 // }
+
+
+// 整数データの受け取り
+// #include <stdio.h>
+
+// int main(void) {
+//   char buf[100];
+//   fgets(buf, sizeof(buf), stdin);
+
+//   int number;
+//   sscanf(buf, "%d", &number);
+//   printf("%d円\n", number * 10);
+// }
