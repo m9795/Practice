@@ -1183,3 +1183,33 @@ fgets関数で受け取ったデータをsscanf関数で余分なデータを省
 //   sscanf(buf, "%d", &number);
 //   printf("%d円\n", number * 10);
 // }
+
+
+// アドレス復習
+// #include <stdio.h>
+
+// void main(){
+//   int a = 100;      // int型の変数
+//   double b= 123.4;  // double型の変数
+//   float c = 123.4f; // float型の変数(数値の後ろにfをつける)
+//   char d = 'a';     // char型の変数
+
+//   /*
+//   ★どの変数にもアドレスがあり、型に依存した固有のサイズがある。
+
+//   1.サイズ
+//   sizeof(サイズオブ)演算子= 変数や型のメモリサイズを取得する演算子
+//   使い方は()の中に変数や型を入れることで、そのサイズをバイト単位で取得可能。
+
+//   2.アドレス
+//   「&a」で変数aのアドレスを取得
+//   アドレスは整数型として取得される。
+//   printf()関数の中で「%x」書式で表示すれば16進数(0~f)で結果が表示される。
+//   */
+
+//   printf("a= %d         大きさ= %dバイト　アドレス= 0x%x\n", a, sizeof(int), &a);
+//   printf("a= %d         大きさ= %dバイト　アドレス= 0x%x\n", a, sizeof(a), &a); //上記コードと同じ結果
+//   printf("b= %f　大きさ= %dバイト　アドレス= 0x%x\n", b, sizeof(double), &b);
+//   printf("c= %f　大きさ= %dバイト　アドレス= 0x%x\n", c, sizeof(float), &c);
+//   printf("d= %c　       　大きさ= %dバイト　アドレス= 0x%x\n", d, sizeof(char), &d);
+// }
